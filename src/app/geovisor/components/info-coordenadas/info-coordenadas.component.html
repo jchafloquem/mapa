@@ -1,1 +1,30 @@
-<p>info-coordenadas works!</p>
+
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 z-50 w-max">
+	<div class="bg-gray-600 rounded-t-lg w-full grid grid-cols-2 m:grid-cols-3 lg:grid-cols-6 justify-center place-items-center text-[12px]">
+		<div
+			class="bg-slate-50 border-0 border-t border-l border-b border-solid border-[#fff] text-black w-full text-center rounded-tl-lg px-1">
+			DATUM WGS84
+		</div>
+		<div class="border-0 border-t border-r border-b border-solid border-[#fff] text-white w-full text-center px-1">
+			GCS Longitud: {{ _geoviewmap2d.gcsLongitude }}
+		</div>
+
+		<div class="border-0 border-t border-r border-b border-solid border-[#fff] text-white w-full text-center px-1">
+			Latitud: {{ _geoviewmap2d.gcsLatitude }}
+		</div>
+		<div class="border-0 border-r border-t border-b border-solid border-[#fff] text-white w-full text-center px-1">
+			UTM Zona: {{ _geoviewmap2d.utmZone }}
+		</div>
+		<div class="border-0 border-r border-b border-t border-solid border-[#fff] text-white w-full text-center px-1">
+			Este: {{ _geoviewmap2d.utmEast }}
+		</div>
+		<div class="border-0 border-r border-b border-t border-solid border-[#fff] text-white w-full text-center px-1">
+			Norte: {{ _geoviewmap2d.utmNorth }}
+		</div>
+	</div>
+</div>
+<div class="absolute bottom-0 left-1 z-50 w-fit">
+	<div class="w-full text-[15px] text-center px-1 text-white" style="text-shadow: 1px 1px 5px black, 0 0 1em black, 0 0 0.2em black">
+		Escala: 1: {{ _geoviewmap2d.scale }}
+	</div>
+</div>

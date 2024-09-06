@@ -7,11 +7,12 @@ import {
   ViewChild,
 } from '@angular/core';
 import { GeoViewMap2dService } from '../../../services/geo-view-map2d.service';
+import { InfoCoordenadasComponent } from "../../components/info-coordenadas/info-coordenadas.component";
 
 @Component({
   selector: 'app-map2d',
   standalone: true,
-  imports: [],
+  imports: [InfoCoordenadasComponent],
   templateUrl: './map2d.component.html',
   styleUrl: './map2d.component.scss',
 })
@@ -27,6 +28,8 @@ export default class Map2dComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
+    if(this._geoViewMap2dService.mapa){
+      this._geoViewMap2dService.mapa.destroy();
+    }
   }
 }
